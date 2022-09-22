@@ -1,0 +1,54 @@
+.home-page {
+  background: linear-gradient(270.19deg, #2F1399 0.2%, #5141B3 99.86%);
+  min-height: 5000px;
+
+  .mode {
+    padding-top: 118px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 40%;
+    }
+
+    &__item-title {
+      @include montserrat-semi;
+      font-size: 26px;
+      line-height: 32px;
+      color: #FFFFFF;
+      margin-bottom: 40px;
+    }
+
+    &__item-list {
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        p {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+
+    }
+
+    &__item-img {
+      position: relative;
+      min-width: 143px;
+      height: 101px;
+      margin-right: 34px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+
+  }
+
+
+}

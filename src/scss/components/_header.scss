@@ -1,0 +1,66 @@
+.header {
+  background: url("../img/header-bg.jpg") no-repeat;
+  padding: 30px 0 45px;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    a {
+      font-size: 17px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+
+  }
+
+  &__personal-name {
+    color: #ffffff;
+    padding-right: 40px;
+    position: relative;
+    svg {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__main {
+    margin-left: auto;
+    width: 678px;
+    margin-top: 70px;
+    background-color: rgba(#AFA5C4, 0.09);
+    border-radius: 12px;
+    padding: 45px 45px 45px 60px;
+  }
+
+  &__title {
+    @include montserrat-semi;
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 35px;
+  }
+
+  &__main-paragraph {
+    margin-bottom: 28px;
+  }
+
+  &__main-btn {
+    margin-top: 6px;
+  }
+
+
+}

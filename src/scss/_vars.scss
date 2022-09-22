@@ -1,0 +1,14 @@
+@mixin montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+@mixin montserrat-extra {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@mixin montserrat-semi {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
