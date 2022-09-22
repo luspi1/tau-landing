@@ -1,0 +1,63 @@
+.footer {
+  background: linear-gradient(270.19deg, #2F1399 0.2%, #5141B3 99.86%);
+
+  &__inner {
+    padding: 26px 0 57px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    border-top: 0.5px solid #FFFFFF;
+  }
+
+  &__menu {
+    display: flex;
+    margin-left: 80px;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 48px;
+      }
+    }
+
+    a {
+      font-size: 17px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    a {
+      font-size: 17px;
+      line-height: 21px;
+      color: #FFFFFF;
+    }
+
+  }
+
+  &__copyright {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &__email {
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    a:first-child {
+      margin-right: 10px;
+    }
+  }
+
+}
