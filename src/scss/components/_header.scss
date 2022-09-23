@@ -21,15 +21,42 @@
     a {
       font-size: 17px;
       line-height: 21px;
-      color: #FFFFFF;
+      color: #DADBF2;
+      transition: all .3s;
     }
 
+    &:hover {
+      a {
+        color: #ffffff;
+      }
+    }
   }
+
+
+  &__personal-btn {
+    @include montserrat-regular;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 13px 28px;
+    border-radius: 40px;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #19003A;
+    }
+  }
+
 
   &__personal-name {
     color: #ffffff;
     padding-right: 40px;
     position: relative;
+    display: none;
+
     svg {
       position: absolute;
       right: 0;
@@ -37,6 +64,17 @@
       transform: translateY(-50%);
     }
   }
+
+  &__personal_authorized {
+    .header__personal-name {
+      display: block;
+    }
+
+    .header__personal-btn {
+      display: none;
+    }
+  }
+
 
   &__main {
     margin-left: auto;

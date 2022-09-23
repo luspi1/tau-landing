@@ -25,7 +25,6 @@ const image = require('gulp-imagemin');
 const {
   readFileSync
 } = require('fs');
-const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 const mainSass = gulpSass(sass);
@@ -64,18 +63,6 @@ const svgSprites = () => {
       svgmin({
         js2svg: {
           pretty: true,
-        },
-      })
-    )
-    .pipe(
-      cheerio({
-        run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: {
-          xmlMode: true
         },
       })
     )
@@ -248,9 +235,6 @@ const htmlInclude = () => {
       prefix: '@',
       basepath: '@file'
     }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
-    }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
 }
@@ -324,11 +308,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 

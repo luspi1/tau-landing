@@ -44,11 +44,10 @@
 
     &__item-img {
       position: relative;
-      min-width: 143px;
-      height: 101px;
-      margin-right: 34px;
-
-      img {
+      width: 95px;
+      height: 100px;
+      margin-right: 50px;
+      svg {
         width: 100%;
         height: 100%;
       }
@@ -149,8 +148,8 @@
       }
 
       &__img {
-        width: 190px;
-        height: 190px;
+        width: 160px;
+        height: 160px;
         margin-bottom: 47px;
 
         img {
@@ -243,6 +242,20 @@
 
     &__checkbox-wrapper {
       margin-bottom: 80px;
+
+      &:hover {
+        label {
+          color: #ffffff;
+        }
+
+        label::before {
+          border-color: #FFFFFF;
+        }
+
+      }
+
+
+
     }
 
     &__checkbox {
@@ -250,7 +263,9 @@
       z-index: -1;
       opacity: 0;
 
+
       & + label {
+        transition: all .3s;
         display: inline-flex;
         align-items: center;
         user-select: none;
@@ -258,6 +273,7 @@
         @include montserrat-regular;
         font-size: 18px;
         line-height: 22px;
+        color: #B9B4E1;
       }
 
       & + label::before {
@@ -268,7 +284,8 @@
         margin-right: 15px;
         flex-shrink: 0;
         flex-grow: 0;
-        border: 0.5px solid #ffffff;
+        transition: all .3s;
+        border: 0.5px solid #B9B4E1;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 15px 15px;

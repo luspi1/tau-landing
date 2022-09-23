@@ -10,6 +10,8 @@
   @include('partials/header.html')
 
   <main class="main home-page">
+    <div class="modal-overlay"></div>
+    @include('partials/login-modal.html')
     <section class="section mode">
       <div class="container">
         <div class="mode__item">
@@ -18,7 +20,9 @@
           <ul class="mode__item-list">
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Электронный секретарь">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img1"></use>
+                </svg>
               </div>
               <p>
                 Электронный секретарь, календарь и ежедневник
@@ -26,7 +30,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Удобное ведение клиентов">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img2"></use>
+                </svg>
               </div>
               <p>
                 Удобное ведение клиентов — от одного до сотен
@@ -34,7 +40,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Минимальный бюджет">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img3"></use>
+                </svg>
               </div>
               <p>
                 Минимальный бюджет при максимальной отдаче
@@ -42,8 +50,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg"
-                     alt="Быстрое и удобное создание задач">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img4"></use>
+                </svg>
               </div>
               <p>
                 Быстрое и удобное создание задач, звонков, встреч
@@ -51,7 +60,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Ничего лишнего">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img5"></use>
+                </svg>
               </div>
               <p>
                 Ничего лишнего и всё, что нужно, под рукой
@@ -65,8 +76,9 @@
           <ul class="mode__item-list">
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg"
-                     alt="Объединение независимых юристов">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img6"></use>
+                </svg>
               </div>
               <p>
                 Объединение независимых юристов или организация
@@ -74,8 +86,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg"
-                     alt="Приглашение временных или постоянных участников">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img7"></use>
+                </svg>
               </div>
               <p>
                 Приглашение временных или постоянных участников
@@ -83,7 +96,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Гибкие настройки">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img8"></use>
+                </svg>
               </div>
               <p>
                 Гибкие настройки доступа
@@ -92,8 +107,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg"
-                     alt="Разделение команды на юристов и персонал организации">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img9"></use>
+                </svg>
               </div>
               <p>
                 Разделение команды на юристов и персонал организации
@@ -101,7 +117,9 @@
             </li>
             <li>
               <div class="mode__item-img">
-                <img src="img/mode-img.jpg" alt="Общая статистика">
+                <svg>
+                  <use xlink:href="img/sprite.svg#mode-img10"></use>
+                </svg>
               </div>
               <p>
                 Общая статистика действий
@@ -181,7 +199,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="capabilities-swiper__img">
-                <img src="img/capabilities-slide.png"
+                <img src="img/capabilities-slide1.png"
                      alt="slide">
               </div>
               <p>
@@ -190,7 +208,7 @@
             </div>
             <div class="swiper-slide">
               <div class="capabilities-swiper__img">
-                <img src="img/capabilities-slide.png"
+                <img src="img/capabilities-slide2.png"
                      alt="slide">
               </div>
               <p>
@@ -199,7 +217,7 @@
             </div>
             <div class="swiper-slide">
               <div class="capabilities-swiper__img">
-                <img src="img/capabilities-slide.png"
+                <img src="img/capabilities-slide3.png"
                      alt="slide">
               </div>
               <p>
@@ -209,7 +227,7 @@
             </div>
             <div class="swiper-slide">
               <div class="capabilities-swiper__img">
-                <img src="img/capabilities-slide.png"
+                <img src="img/capabilities-slide4.png"
                      alt="slide">
               </div>
               <p>
@@ -218,7 +236,7 @@
             </div>
             <div class="swiper-slide">
               <div class="capabilities-swiper__img">
-                <img src="img/capabilities-slide.png"
+                <img src="img/capabilities-slide1.png"
                      alt="slide">
               </div>
               <p>

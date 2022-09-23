@@ -62,11 +62,35 @@ select::-ms-expand {
   display: none;
 }
 
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+
+  &_active {
+    visibility: visible;
+  }
+}
+
 .swiper-button-disabled {
   cursor: auto !important;
   pointer-events: none !important;
-  //opacity: 0.55 !important;
 }
+
+
+.just-validate-error-label {
+  padding-top: 20px;
+  @include montserrat-regular;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FF6CC4 !important;
+}
+
 
 .site-container {
   position: relative;
