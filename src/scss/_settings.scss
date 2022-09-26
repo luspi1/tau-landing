@@ -103,8 +103,16 @@ select::-ms-expand {
   margin: 0 auto;
 }
 
+
+.main-btn-wrapper {
+  height: 88px;
+  width: 312px;
+  position: relative;
+}
+
 .main-btn {
   @include montserrat-semi;
+  width: 100%;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
