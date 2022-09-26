@@ -6,7 +6,7 @@ const swiperTool = new Swiper('.tool-swiper', {
     prevEl: '.tool-swiper__button-prev'
   },
 
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 75,
 
   pagination: {
@@ -14,6 +14,11 @@ const swiperTool = new Swiper('.tool-swiper', {
     clickable: 'true',
   },
 
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  }
 
 
   // breakpoints: {
@@ -36,14 +41,31 @@ const swiperTool = new Swiper('.tool-swiper', {
 
 const swiperCapabilities = new Swiper('.capabilities-swiper', {
 
-  slidesPerView: 4,
-  spaceBetween: 158,
+  slidesPerView: 1,
+  // spaceBetween: 158,
 
   pagination: {
     el: '.capabilities-swiper__pagination',
     clickable: 'true',
   },
 
+
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 45,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 45,
+    },
+
+    1280: {
+      spaceBetween: 158,
+      slidesPerView: 4,
+    },
+  }
 
 
   // breakpoints: {
