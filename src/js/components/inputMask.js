@@ -28,3 +28,13 @@ if (birthdayInput) {
     showMaskOnFocus: false,
   }).mask(birthdayInput);
 }
+
+const passwordPhone = document.querySelector('.password-form__phone-input');
+
+if (passwordPhone) {
+  Inputmask({
+    "mask": "+7 (999) 999-99-99",
+    showMaskOnHover: false,
+    showMaskOnFocus: false,
+  }).mask(passwordPhone);
+}
