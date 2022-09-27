@@ -5,6 +5,8 @@ import { modalOverlay } from "../_vars";
 
 const regBtn = document.querySelector('.reg-link')
 const regForm = document.querySelector('.reg-form')
+const loginForm = document.querySelector('.login-form')
+const enterPasswordBtn = document.querySelector('.btn-enter-pass')
 
 const patronymicInput = document.querySelector('.patronymic-input')
 
@@ -13,12 +15,19 @@ const patronymicInput = document.querySelector('.patronymic-input')
 regBtn.addEventListener('click', () => {
   regForm.classList.add('reg-form_active')
   modalOverlay.classList.add('modal-overlay_active')
+  loginForm.classList.remove('login-form_active')
 })
 
 modalOverlay.addEventListener('click', () => {
   regForm.classList.remove('reg-form_active')
   modalOverlay.classList.remove('modal-overlay_active')
 })
+
+enterPasswordBtn.addEventListener('click', () => {
+ regForm.classList.remove('reg-form_active')
+ loginForm.classList.add('login-form_active')
+})
+
 
 // Валидация формы
 
