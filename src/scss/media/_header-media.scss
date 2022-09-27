@@ -5,7 +5,6 @@
   }
 }
 
-;
 @media (max-width: 1280px) {
   .header__nav-item:not(:last-child) {
     margin-right: 30px;
@@ -13,10 +12,6 @@
 
   .header__main {
     background-color: rgba(175, 165, 196, 0.3);
-  }
-
-  .home-page .mode__item {
-    width: 46%;
   }
 }
 
@@ -56,42 +51,6 @@
     font-size: 16px;
     margin-bottom: 20px;
   }
-
-  .home-page .mode .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-page .mode__item {
-    width: 80%;
-  }
-
-  .home-page .section-subtitle {
-    font-size: 30px;
-  }
-
-  .home-page .feedback__form-fields {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-page .feedback__form-item {
-    width: 90%;
-  }
-
-  .home-page .feedback__form-item label {
-    margin: 30px 0 0;
-  }
-
-  .footer__inner {
-  align-items: baseline;
-  }
-
-  .footer__menu {
-    flex-direction: column;
-  }
-
-
 }
 
 @media (max-width: 768px) {
@@ -117,50 +76,6 @@
   .header__menu {
     align-items: flex-start;
   }
-
-  .home-page .mode {
-    padding-top: 60px;
-  }
-
-  .home-page .mode__item {
-    width: 100%;
-  }
-
-  .home-page .mode__item-list li p {
-    font-size: 18px;
-  }
-
-  .home-page .tool {
-    padding-top: 60px;
-  }
-
-  .home-page .section-subtitle {
-    line-height: 1.7;
-  }
-
-  .home-page .feedback__form-item input {
-    font-size: 28px;
-  }
-
-  .home-page .feedback {
-    padding: 60px 0 100px;
-  }
-
-  .footer__inner {
-    justify-content: space-between;
-  }
-
-  .footer__menu {
-    margin-left: 0;
-  }
-
-  .footer__contacts {
-    flex-direction: column;
-    margin-left: 0;
-  }
-  .footer__email {
-    margin: 0;
-  }
 }
 
 @media (max-width: 450px) {
@@ -179,59 +94,6 @@
 
   .header__personal {
     margin: 25px 0;
-  }
-
-  .main-btn-wrapper {
-    width: 100%;
-  }
-
-  .main-btn {
-    padding: 25px 20px;
-  }
-
-  .home-page .mode__item-title {
-    font-size: 22px;
-  }
-
-  .home-page .mode__item-img svg {
-    width: 120%;
-  }
-
-  .home-page .section-subtitle {
-    font-size: 24px;
-
-  }
-
-  .home-page .capabilities .capabilities-swiper__img {
-    margin: 0 auto 45px;
-  }
-
-  .home-page .capabilities .capabilities-swiper p {
-    width: 85%;
-    margin: auto;
-  }
-
-  .home-page .feedback__form-item {
-    width: 100%;
-  }
-
-  .home-page .feedback__form-item input {
-    font-size: 22px;
-  }
-
-  .home-page .feedback__checkbox + label {
-    font-size: 16px;
-  }
-
-  .footer__inner {
-    max-width: 140px;
-    margin: auto;
-    flex-direction: column-reverse;
-  }
-
-  .footer__copyright,
-  .footer__contacts a {
-    margin: 7px 0;
   }
 }
 

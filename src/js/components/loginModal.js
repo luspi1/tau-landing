@@ -53,6 +53,4 @@ if (loginForm) {
     modalOverlay.classList.remove('modal-overlay_active')
     personalInfo.classList.add('header__personal_authorized')
   })
-
-
 }
