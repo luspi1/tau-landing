@@ -1,40 +1,29 @@
-.login-form {
+//Стилизация формы регистрации
+.reg-btn {
+  width: 300px;
+  background: #2F65F6;
+}
+.reg-form {
   width: 550px;
-  min-height: 470px;
+  min-height: 1000px;
   background-color: #fff;
   position: absolute;
   left: 50%;
   top: 138px;
   transform: translateX(-50%);
   border-radius: 20px;
-  padding: 40px 35px 35px;
+  padding: 40px 35px;
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
-  z-index: 11;
+  z-index: 12;
+  font-family: 'Inter';
 
-
-  .auth-btn {
-    width: 100%;
-    background: #CBC9D6;
-    border-radius: 15px;
-    border: none;
-    padding: 20px 0;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: #FFFFFF;
-    cursor: pointer;
-    margin-bottom: 25px;
-    transition: all .3s;
-  }
-
-
-  &:valid .auth-btn {
+  &:valid .submit-btn {
     background-color: #2F65F6;;
   }
 
-  &:valid .auth-btn:hover {
+  &:valid .submit-btn:hover {
     background-color: #264DDB;
   }
 
@@ -92,7 +81,7 @@
       height: 23px;
     }
 
-    .explanation-btn:hover ~ .login-form__explanation {
+    .explanation-btn:hover ~ .reg-form__explanation {
       opacity: 1;
       visibility: visible;
     }
@@ -117,8 +106,14 @@
       outline: 1px solid #3E29CA;
       background-color: #ffffff;
     }
+    //&:focus ~ .reg-form__label{
+    //  top: 13px;
+    //  font-weight: 400;
+    //  font-size: 15px;
+    //  line-height: 18px;
+    //}
 
-    &_active ~ .login-form__label {
+    &_active ~ .reg-form__label {
       top: 13px;
       font-weight: 400;
       font-size: 15px;
@@ -166,55 +161,140 @@
     }
   }
 
-  .forget-link {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 19px;
-    color: #2F65F6;
-    margin-top: 10px;
+
+  .patronymic-input:disabled {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  &__check-input {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 32px;
+
+    input {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    label {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #817D8C;
+    }
+  }
+
+  &__rules {
+    margin: 30px auto 28px;
+    max-width: 427px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #817D8C;
+
+    a {
+      color: #2F65F6;
+    }
+  }
+
+  .password-input {
+    justify-content: center;
+    position: relative;
     margin-bottom: 20px;
+
+    .explanation-btn {
+      margin-left: 10px;
+      cursor: pointer;
+      &:hover ~ .reg-form__explanation {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   .line {
     width: 100%;
     opacity: 0.7;
     height: 0.7px;
-    margin-bottom: 27px;
+    margin-bottom: 35px;
     background-color: #9D9BA8;
   }
 
-  .reg-link {
-    display: block;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 22px;
+  &__authorization {
     text-align: center;
-    color: #2F65F6;
-    cursor: pointer;
+    margin: 0 auto;
+    max-width: 287px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #817D8C;
+
+    a {
+      color: #2F65F6;
+    }
   }
 }
+.btn {
+  width: 100%;
+  background: #CBC9D6;
+  border-radius: 15px;
+  border: none;
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: all .3s;
+}
 
+.air-datepicker-body--day-name {
+  color: #817D8C;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: lowercase;
+}
 
-// медиазапросы формы авторизации
+.air-datepicker-cell.-day- {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
 
+.air-datepicker-global-container {
+  z-index: 9999;
+}
+
+//медиазапросы формы регистрации
 @media (max-width: 1160px) {
-  .login-form__explanation {
+  .reg-form__explanation {
     right: -25px;
   }
 }
 
 @media (max-width: 550px) {
-  .login-form {
+  .reg-form {
     max-width: 420px;
   }
 }
 
 @media (max-width: 430px) {
-  .login-form {
+  .reg-form {
     max-width: 340px;
     padding: 30px 15px;
   }
-  .login-form__explanation {
+  .reg-form__explanation {
     right: 0;
   }
+  .reg-form__input[name="phone"] + label {
+    font-size: 17px;
+  }
 }
+

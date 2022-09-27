@@ -1,0 +1,40 @@
+@media (max-width: 1024px) {
+  .footer__inner {
+    align-items: baseline;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    justify-content: space-between;
+  }
+
+  .footer__menu {
+    margin-left: 0;
+  }
+
+  .footer__contacts {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .footer__email {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__inner {
+    max-width: 140px;
+    margin: auto;
+    flex-direction: column-reverse;
+  }
+
+  .footer__copyright,
+  .footer__contacts a {
+    margin: 7px 0;
+  }
+}

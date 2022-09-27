@@ -19,23 +19,6 @@ const swiperTool = new Swiper('.tool-swiper', {
       slidesPerView: 2,
     },
   }
-
-
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 30
-  //   },
-  //   1024: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 45
-  //   },
-  //   1280: {
-  //     spaceBetween: 60,
-  //     slidesPerView: 4,
-  //   },
-  // }
-
 });
 
 
@@ -66,21 +49,4 @@ const swiperCapabilities = new Swiper('.capabilities-swiper', {
       slidesPerView: 4,
     },
   }
-
-
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 30
-  //   },
-  //   1024: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 45
-  //   },
-  //   1280: {
-  //     spaceBetween: 60,
-  //     slidesPerView: 4,
-  //   },
-  // }
-
 });
