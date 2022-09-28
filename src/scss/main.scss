@@ -13,8 +13,10 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/login-modal";
-@import "./components/_registration-modal";
-@import "./components/_password-modal";
+@import "./components/registration-modal";
+@import "./components/password-modal";
+@import "./components/info-modal";
+@import "./components/loader";
 
 
 @import './media/header-media';

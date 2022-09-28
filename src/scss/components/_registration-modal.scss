@@ -17,7 +17,7 @@
   visibility: hidden;
   transition: all .3s;
   z-index: 12;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
 
   &:valid .submit-btn {
     background-color: #2F65F6;;
