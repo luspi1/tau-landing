@@ -55,23 +55,12 @@
     color: #ffffff;
     padding-right: 40px;
     position: relative;
-    display: none;
 
     svg {
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-    }
-  }
-
-  &__personal_authorized {
-    .header__personal-name {
-      display: block;
-    }
-
-    .header__personal-btn {
-      display: none;
     }
   }
 
