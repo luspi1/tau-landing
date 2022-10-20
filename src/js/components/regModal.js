@@ -24,27 +24,63 @@ modalOverlay.addEventListener('click', () => {
 })
 
 enterPasswordBtn.addEventListener('click', () => {
- regForm.classList.remove('reg-form_active')
- loginForm.classList.add('login-form_active')
+  regForm.classList.remove('reg-form_active')
+  loginForm.classList.add('login-form_active')
 })
-
 
 // Валидация формы
 
-regForm.addEventListener('input', (e) => {
-  const inputTarget = e.target
+function validateFormInput(nameForm, nameClassActive) {
+  nameForm.addEventListener('input', (e) => {
+    const inputTarget = e.target;
+    if (!inputTarget.validity.valid) {
+      inputTarget.parentElement.classList.add('invalid')
+    } else {
+      inputTarget.parentElement.classList.remove('invalid')
+    }
+    inputTarget.classList.add(nameClassActive) //для автозаполнения Edge
+  });
+};
 
-  if (!inputTarget.validity.valid) {
-    inputTarget.parentElement.classList.add('invalid')
-  } else {
-    inputTarget.parentElement.classList.remove('invalid')
-  }
-  if (inputTarget.value) {
-    inputTarget.classList.add('reg-form__input_active')
-  } else {
-    inputTarget.classList.remove('reg-form__input_active')
-  }
-})
+function focusInTarget(nameForm, nameClassActive) {
+  nameForm.addEventListener('focusin', (e) => {
+    const inputTarget = e.target
+    inputTarget.classList.add(nameClassActive)
+  })
+};
+
+function focusOutTarget(nameForm, nameClassActive) {
+  nameForm.addEventListener('focusout', (e) => {
+    const inputTarget = e.target
+    if (inputTarget.value === '') {
+      inputTarget.classList.remove(nameClassActive)
+    }
+  })
+};
+
+//для автозаполнения Firefox
+function autocompleteFirefox(nameClassInput, nameClassActive) {
+  const classInput = document.querySelectorAll(`.${nameClassInput}`);
+  classInput.forEach(element => {
+    if (!element.value == '') {
+      element.classList.add(nameClassActive);
+    }
+  })
+};
+
+//окно входа
+
+validateFormInput(loginForm, 'login-form__input_active');
+focusInTarget(loginForm, 'login-form__input_active');
+focusOutTarget(loginForm, 'login-form__input_active');
+autocompleteFirefox('login-form__input', 'login-form__input_active');
+
+//окно регистрации
+
+validateFormInput(regForm, 'reg-form__input_active');
+focusInTarget(regForm, 'reg-form__input_active');
+focusOutTarget(regForm, 'reg-form__input_active');
+autocompleteFirefox('reg-form__input', 'reg-form__input_active');
 
 
 // Блокировка поля "Отчество" через чекбокс
