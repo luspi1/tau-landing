@@ -52,7 +52,7 @@ function focusInTarget(nameForm, nameClassActive) {
 function focusOutTarget(nameForm, nameClassActive) {
   nameForm.addEventListener('focusout', (e) => {
     const inputTarget = e.target
-    if (inputTarget.value === '') {
+    if (!inputTarget.value) {
       inputTarget.classList.remove(nameClassActive)
     }
   })
@@ -62,7 +62,7 @@ function focusOutTarget(nameForm, nameClassActive) {
 function autocompleteFirefox(nameClassInput, nameClassActive) {
   const classInput = document.querySelectorAll(`.${nameClassInput}`);
   classInput.forEach(element => {
-    if (!element.value == '') {
+    if (element.value !== '') {
       element.classList.add(nameClassActive);
     }
   })
